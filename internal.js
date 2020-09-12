@@ -29,7 +29,7 @@ function init(n, toggleHTMLCell, setHTMLCell){
   * This function is called when the clear button is clicked.
   */
 function reset(){
-	console.log("reset not implemented");
+	init(size, toggleHTMLCell, setHTMLCell);
 }
 
 /**
