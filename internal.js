@@ -16,7 +16,12 @@ function presets(){
   *     to black if the boolean liveState is true and white if false
   */
 function init(n, toggleHTMLCell, setHTMLCell){
-	console.log("init not implemented");
+  
+  for (x=0; x<n; x++) {
+    for (y=0; y<n; y++) {
+      setHTMLCell(x, y, false);
+    }
+  }
 }
 
 /**
