@@ -55,7 +55,7 @@ function step(){
   * This function is called when the cell is manually clicked by the user while the game is not running.
   */
 function toggled(x, y){
-	console.log("toggled not implemented");
+	toggleHTMLCell(x, y);
 }
 
 
