@@ -78,13 +78,15 @@ function presets(){
   */
 function init(n, toggleHTMLCell, setHTMLCell){
 
+  // store these values so they can be used by other functions
   htmlToggle = toggleHTMLCell;
   htmlSet = setHTMLCell;
   boardSize = n;
   
-  for (x=0; x<n; x++) {
+  // set up the board such that all cells are dead
+  for (x = 0; x < n; x++) {
     board.push([]);
-    for (y=0; y<n; y++) {
+    for (y = 0; y < n; y++) {
       setBoardCell(x, y, false);
     }
   }
@@ -126,7 +128,7 @@ let getNumAliveNeighbors = (x, y) => {
 
   // iterate through the square centered on the cell
   for (neighborX = -1; neighborX < 2; neighborX++) {
-    for (neighborY=-1; neighborY<2; neighborY++) {
+    for (neighborY = -1; neighborY < 2; neighborY++) {
 
       // don't count the cell itself
       if (neighborX === x && neighborY === y) {
