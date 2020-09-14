@@ -63,7 +63,6 @@ let presetBoards = {
   * Returns an array of names of preset configurations to be offered.
   */
 function presets(){
-  console.log("presets not implemented")
   return Object.keys(presetBoards);
 }
 
@@ -97,7 +96,13 @@ function init(n, toggleHTMLCell, setHTMLCell){
   * This function is called when the clear button is clicked.
   */
 function reset(){
-	init(size, toggleHTMLCell, setHTMLCell);
+  
+  // iterate through the board and clear all the cells
+  board.forEach((row, x) => {
+    board.forEach((col, y) => {
+      setBoardCell(x, y, false);
+    })
+  })
 }
 
 /**
