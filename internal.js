@@ -99,10 +99,10 @@ function reset(){
   
   // iterate through the board and clear all the cells
   board.forEach((row, x) => {
-    board.forEach((col, y) => {
+    row.forEach((col, y) => {
       setBoardCell(x, y, false);
-    })
-  })
+    });
+  });
 }
 
 /**
@@ -132,9 +132,15 @@ let getNumAliveNeighbors = (x, y) => {
   let numAliveNeighbors = 0;
 
   // iterate through the square centered on the cell
-  for (neighborX = -1; neighborX < 2; neighborX++) {
-    for (neighborY = -1; neighborY < 2; neighborY++) {
+  for (deltaX = -1; deltaX < 2; deltaX++) {
+    for (deltaY = -1; deltaY < 2; deltaY++) {
+      let neighborX = x + deltaX;
+      let neighborY = y + deltaY;
 
+      // don't consider OOB coodrinates
+      if ((neighborX < 0 || neighborX >= boardSize) || (neighborX < 0 || neighborX >= boardSize)) {
+        continue;
+      }
       // don't count the cell itself
       if (neighborX === x && neighborY === y) {
         continue;
@@ -155,7 +161,14 @@ let getNumAliveNeighbors = (x, y) => {
   * This function is called on a regular interval while the game is playing.
   */
 function step(){
-	console.log("step not implemented");
+  console.log("stepping");
+	board.forEach((row, x) => {
+    row.forEach((col, y) => {
+      //compute the number of living neighbors for a cell
+      let numNeighbors = getNumAliveNeighbors(x, y); 
+      console.log("number of neighbors for: (" + x + ", " + y + "): " + numNeighbors);
+    });
+  });
 }
 
 /**
