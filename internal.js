@@ -182,7 +182,11 @@ function step(){
     });
   });
 
-  board = newBoard;
+  newBoard.forEach((row, x) => {
+    row.forEach((element, y) => {
+      setBoardCell(x, y, element);
+    })
+  })
 }
 
 /**
