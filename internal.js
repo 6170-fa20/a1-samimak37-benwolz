@@ -181,6 +181,8 @@ function step(){
       }
     });
   });
+
+  board = newBoard;
 }
 
 /**
