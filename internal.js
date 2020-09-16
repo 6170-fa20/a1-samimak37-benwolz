@@ -161,12 +161,24 @@ let getNumAliveNeighbors = (x, y) => {
   * This function is called on a regular interval while the game is playing.
   */
 function step(){
+
+  let newBoard = [];
+
   console.log("stepping");
 	board.forEach((row, x) => {
+    newBoard.push([]);
     row.forEach((col, y) => {
       //compute the number of living neighbors for a cell
       let numNeighbors = getNumAliveNeighbors(x, y); 
-      console.log("number of neighbors for: (" + x + ", " + y + "): " + numNeighbors);
+      if (numNeighbors < 2) {
+        newBoard[x][y] = false;
+      } else if (numNeighbors == 2) {
+        newBoard[x][y] = board[x][y];
+      } else if (numNeighbors == 3) {
+        newBoard[x][y] = true;
+      } else {
+        newBoard[x][y] = false;
+      }
     });
   });
 }
