@@ -24,13 +24,6 @@ let buildFromList = (pointList) => {
 };
 
 /**
- * Builds the preset "Simple Square" on the board
- */
-let makeSquare = () => {
-  buildFromList([[5, 5]]);
-}
-
-/**
  * Marks the given cell as "alive" or "dead" based on the value of `liveState`
  * 
  * @param {Number} x the x-coordinate of the cell that is being set
@@ -56,7 +49,8 @@ let toggleBoardCell = (x, y) => {
 
 // Mapping of all preset games to the functions that make them
 let presetBoards = {
-  "Simple Square": makeSquare,
+  "Simple Square": () => {buildFromList([[5, 5]]);},
+  "New Preset": () => {buildFromList[[1, 2], [3, 5], [3, 6]];}
 };
 
 /**
