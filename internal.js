@@ -49,8 +49,28 @@ let toggleBoardCell = (x, y) => {
 
 // Mapping of all preset games to the functions that make them
 let presetBoards = {
-  "Simple Square": () => {buildFromList([[5, 5]]);},
-  "New Preset": () => {buildFromList[[1, 2], [3, 5], [3, 6]];}
+  "Border": () => {
+    board.forEach((row, x) => {
+      row.forEach((_, y) => {
+        if (x === 0 || x === boardSize - 1) {
+          setBoardCell(x, y, true);
+        } else if (y === 0 || y === boardSize - 1) {
+          setBoardCell(x, y, true);
+        }
+      });
+    });
+  },
+  "Big X": () => {
+    board.forEach((row, x) => {
+      row.forEach((_, y) => {
+        
+        // if the cell is on the diagonal, make it alive
+        if (x + y === boardSize - 1 || x === y) {
+          setBoardCell(x, y, true);
+        }
+      });
+    });
+  },
 };
 
 /**
