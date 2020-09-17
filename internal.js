@@ -183,7 +183,7 @@ let buildFromList = (pointList) => {
     let xCoord = point[0];
     let yCoord = point[1];
 
-    setBoardCell(xCoord, yCoord, true);
+    board.setBoardCell(xCoord, yCoord, true);
   });
 }
 
