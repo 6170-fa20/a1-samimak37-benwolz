@@ -15,3 +15,10 @@ Functionals were critical in almost every feature we implemented. While a few (i
 
 ## Alternatives 
 One of the main alternatives we made a decision on was the representation of the board during the step method. While we settled with creating a new board every time, one plan we had was to create two boards from the start, and switch ownership/representation of one as the "board" and one as the "previous board" this would have saved significantly on performance by saving us the trouble of having to build a new array every time, but repeatedly drawing over the same boards over and over again could lead to some entanglements with aliasing that could've caused some extremely confusing bugs, especially with what errors we'd be expecting to get back from javascript. For the sake of simplicity and clear code, we took the hit on performance and created a new template board to write on at every step.
+
+## Limitations (Samantha York)
+One of the main limitations of this implementation is that it only handles boards of a finite size, and kills any cells that would be placed outside of the bounds of the board. It would be pretty interesting to see about implementing it such that the game is unbounded, which could potentially be achieved
+by using a set structure to keep track of all living cells. Another limitation is that the current implementation only supports one rule set. This is fine for this particular assignment, but might need to be generalized if there were any modifications that we wanted to make to the rules of the game. This could probably be easily fixed with callbacks passed into the step function.
+
+## Ethical Implications
+One ethical implication of this project is the way that it broadcasts ideas about how populations manage themselves. Conway's game of life introduces a very simplistic and determinsitic set of rules, and attempts to use these to make a model for population fluctuations. The only challenge to this is that these mechanics are not even close to this simple, and even have some randomization. This means that Conway's model is really not a viable model, but we are perpetuating it by recreating the game.
