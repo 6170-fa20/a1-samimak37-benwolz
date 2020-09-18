@@ -55,25 +55,25 @@ Sam did an amazing job handling the keys for much of our paired programming work
 
 # Partner 2 
 ## Info
-**Name**:  Tim T. Beaver
+**Name**:  Samantha York
 
-**Email address (kerberos username or primary email if cross-reg)**:  tim@mit.edu
+**Email address (kerberos username or primary email if cross-reg)**:  samimak@mit.edu
 ## Reflection (Please provide just a few sentences)
 **What did you learn from this assignment?**
 
-Many things
+I learned how to use closures in order to effectively prevent rep exposure and simulate private class fields.
 
 **What was hard or easy?**
 
-Different stuff 
+I think the main challenge was figuring out how to turn our board prototype into a closure, but once it got going it went well.
  
 **How many hours did you spend on this assignment?**
 
-##.## hrs
+5.0 hrs
 
 **Any suggestions for how we might improve it?** 
 
-Make it better
+Maybe provide a little bit better documentation on the functions that are passed into `init`? Once I figured out what they did it was really simple, but getting to that point was a little funky until I just tried using them.
 
 **Any other feedback?**
 
@@ -83,19 +83,20 @@ Nope!
 ## Self Critique (single paragraph)
 **Please evaluate your contributions to the assignment. Critique your design, implementation, and effort.**
 
-I did half. The design was nice, the implementation was cool, and the effort was maximal
+I was a fan of the way that I refactored the board class into a closure, as it turned out to be a little bit more straightforward than I anticipated. I also like the ideas I had for some of the presets, as I think they turn into some pretty cool animations. Overall, I think I put solid effort into the assignment. I wish that I had suggested that we do it that way from the start, because then the refactor wouldn't have been necessary, but the learning experience was nice. I do wish that the overall implementation was a little bit cleaner, though, as I wasn't entirely sure what the best way to make the functions publically accessible was.
 
 ## Partner Critique (single paragraph)
 **Please evaluate your partner's contributions to the assignment. Critique their design, implementation, collaboration, and effort, provide constructive suggestions for improvement, commend their contributions, etc.**
 
-Partner did half. Their design was nice, their implementation was cool, and their effort was maximal
+Ben was an amazing partner to work with, who put in a lot of effort to the project and came up with several of the ideas about the main functionality of the game (and the implementation of those). I really appreciated his input and catching of my mistakes. His code was very well documented and implemented, and it was super easy for me to follow/understand so I knew how to use it in my own code. We stayed in contact regularly throughout the assignment, and we were always on the same page, which definitely helped with this as well. Overall I am very glad that I had the chance to work with him, and honestly I don't know of much that he could do better - he was just great all around.
 
 ## Authorship
 **Please indicate the code, reflections, sections, etc. you authored below:**
 
-* `E.js`   
-* `F.js`  
-	* `someFunction()`  
-* `G.js `  
-* `H.js`  
-	* `SomeClass`
+* `internal.js`  
+	* `step() (partner)`
+	* `init()`
+	* `makeBoard()` (just the closure aspect, functions were partner-coded)
+	* `presets() (partner)`
+	* `toggled()`
+* `reflection (d) and (e))`
