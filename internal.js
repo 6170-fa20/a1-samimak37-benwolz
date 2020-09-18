@@ -207,6 +207,28 @@ let presetBoards = {
       }
     });
   },
+
+  "Glider": () => {
+    let gliderCoords = [[0, 1], [1, 2], [2, 2], [2, 0], [2, 1]] // should walk from top left to bottom right of the screen
+    board.forEach((x, y) => {
+      gliderCoords.forEach((ele) => {
+        if (ele[0] == y && ele[1] == x) {
+          board.setBoardCell(x, y, true);
+        }
+      });
+    })
+  },
+
+  "Exploder": () => {
+    let gliderCoords = [[9, 9], [9, 10], [9, 11], [9, 12], [9, 13], [13, 9], [13, 10], [13, 11], [13, 12], [13, 13], [11, 9], [11, 13]] // exploder
+    board.forEach((x, y) => {
+      gliderCoords.forEach((ele) => {
+        if (ele[0] == y && ele[1] == x) {
+          board.setBoardCell(x, y, true);
+        }
+      });
+    })
+  }
 };
 
 /**
