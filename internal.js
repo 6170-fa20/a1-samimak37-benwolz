@@ -45,10 +45,8 @@ const makeBoard = (n, htmlToggle, htmlSet) => {
    * Marks all cells on the game board as dead (This is the same as making a new game)
    */
   const clearBoard = () => {
-    board.forEach((row, x) => {
-      row.forEach((_, y) => {
-        setBoardCell(x, y, false);
-      });
+    forEach((x, y) => {
+      setBoardCell(x, y, false);
     });
   }
 
